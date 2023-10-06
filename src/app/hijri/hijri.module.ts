@@ -12,11 +12,13 @@ import { HijriCalendarMomentDateFormatter } from './HijriCalendarMomentDateForma
 import { HijriCalendarComponent } from './hijri-calendar/hijri-calendar.component';
 import { registerLocaleData } from '@angular/common';
 import localeArSA from '@angular/common/locales/ar-SA';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [HijriCalendarComponent],
   imports: [
     CommonModule,
+    TranslateModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: function () {

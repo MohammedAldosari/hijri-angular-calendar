@@ -1,12 +1,13 @@
 <div class="row text-center p-5">
   <div class="col-md-4">
-    <div class="btn-group">
+    <div class="btn-group" [dir]="local.includes('ar') ? 'rtl' : 'ltr'">
       <div
         class="btn btn-primary"
         mwlCalendarPreviousView
         [view]="view"
         [(viewDate)]="viewDate"
         (viewDateChange)="closeOpenMonthViewDay()"
+        translate
       >
         Previous
       </div>
@@ -14,6 +15,7 @@
         class="btn btn-outline-secondary"
         mwlCalendarToday
         [(viewDate)]="viewDate"
+        translate
       >
         Today
       </div>
@@ -24,7 +26,7 @@
         [(viewDate)]="viewDate"
         (viewDateChange)="closeOpenMonthViewDay()"
       >
-        Next
+        <span translate>Next</span>
       </div>
     </div>
   </div>
@@ -38,21 +40,21 @@
         (click)="setView(CalendarView.Month)"
         [class.active]="view === CalendarView.Month"
       >
-        Month
+        <span translate>Month</span>
       </div>
       <div
         class="btn btn-primary"
         (click)="setView(CalendarView.Week)"
         [class.active]="view === CalendarView.Week"
       >
-        Week
+        <span translate>Week</span>
       </div>
       <div
         class="btn btn-primary"
         (click)="setView(CalendarView.Day)"
         [class.active]="view === CalendarView.Day"
       >
-        Day
+        <span translate>Day</span>
       </div>
     </div>
   </div>

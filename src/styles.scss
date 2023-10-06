@@ -1,2 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
+
+[dir="rtl"] {
+  .btn-group > .btn:first-child:not(.dropdown-toggle),
+  .btn-group > .btn.dropdown-toggle-split:first-child,
+  .btn-group > .btn-group:first-child > .btn {
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .btn-group > .btn:nth-child(n + 3),
+  .btn-group > .btn-group:not(:first-child) > .btn {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
