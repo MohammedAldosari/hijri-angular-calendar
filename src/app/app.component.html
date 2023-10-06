@@ -1,0 +1,39 @@
+<div class="d-flex align-items-center justify-content-center">
+  <div class="container p-5">
+    <div class="row justify-content-center">
+      <div class="col-3">
+        <h5>Language</h5>
+        <select
+          [formControl]="language"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected value="en">English (en)</option>
+          <option value="ar-SA">Arabic (ar-SA)</option>
+        </select>
+        <p>Value: {{ language.value }}</p>
+      </div>
+      <div class="col-3">
+        <h5>Calendar type</h5>
+        <select
+          [formControl]="calendarType"
+          class="form-select"
+          aria-label="Default select example"
+        >
+          <option selected value="g">Gregorian (g)</option>
+          <option value="h">Hijri (h)</option>
+        </select>
+        <p>Value: {{ calendarType.value }}</p>
+      </div>
+      <div [dir]="language.value.includes('ar') ? 'rtl' : 'ltr'">
+        <app-hijri-calendar
+          [local]="language.value"
+          [calendarType]="calendarType.value"
+        ></app-hijri-calendar>
+      </div>
+    </div>
+    <!-- Everything you see below is just for the demo, you don't need to include it in your app -->
+
+    <br /><br /><br />
+  </div>
+</div>
