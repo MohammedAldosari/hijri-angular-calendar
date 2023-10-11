@@ -2,9 +2,9 @@
   [dir]="language.value.includes('ar') ? 'rtl' : 'ltr'"
   class="d-flex align-items-center justify-content-center"
 >
-  <div class="container p-5">
+  <div class="container p-2 p-md-5">
     <div class="row justify-content-center">
-      <div class="col-3">
+      <div class="col-12 px-5 col-md-4 col-sm-6 clo-xs-12">
         <h5 translate>Language</h5>
         <select [formControl]="language" class="form-select">
           <option selected value="en">English (en)</option>
@@ -12,7 +12,7 @@
         </select>
         <p>Value: {{ language.value }}</p>
       </div>
-      <div class="col-3">
+      <div class="col-12 px-5 col-md-4 col-sm-6 clo-xs-12">
         <h5 translate>Calendar type</h5>
         <select
           [formControl]="calendarType"

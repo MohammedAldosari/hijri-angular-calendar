@@ -18,3 +18,24 @@
     border-bottom-right-radius: 0;
   }
 }
+
+.cal-month-view .cal-day-cell,
+.cal-month-view .cal-cell-top {
+  min-height: 0;
+}
+.cal-month-view .cal-day-number {
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+.cal-month-view .cal-day-badge {
+  margin: 0;
+  float: unset;
+}
+.cal-day-cell {
+  text-align: center;
+}
+.cal-month-view .cal-day-cell.cal-today .cal-day-number {
+  font-size: 1.2em;
+  font-weight: bold;
+}
