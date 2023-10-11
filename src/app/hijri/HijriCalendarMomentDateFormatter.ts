@@ -75,7 +75,7 @@ export class HijriCalendarMomentDateFormatter
     if (this.dateAdapter.getcalendarType() === 'h') {
       return momentHijri(date)
         .locale(this.dateAdapter.getLocale())
-        .format('idddd');
+        .format('dddd');
     }
     return momentHijri(date)
       .locale(this.dateAdapter.getLocale())
@@ -153,7 +153,7 @@ export class HijriCalendarMomentDateFormatter
     if (this.dateAdapter.getcalendarType() === 'h') {
       return momentHijri(date)
         .locale(this.dateAdapter.getLocale())
-        .format('idddd, LL'); // dddd = Thursday
+        .format('dddd,iD iMMM iYYYY'); // dddd = Thursday
     }
     return momentHijri(date)
       .locale(this.dateAdapter.getLocale())
